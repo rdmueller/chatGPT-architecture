@@ -166,7 +166,7 @@
 
 6. **Continuing Education**: The CPSA-A is designed for continuous learning. It encourages software architects to stay updated with the latest trends and technologies in the field.
 
-&gt; This level is well-suited for experienced software architects who wish to formalize their expertise and further their professional development in specific areas of software architecture.</div></pre><pre class="message"><div class="author">user</div><div>So, here are the official rules for taking the exam.</div></pre><pre class="message"><div class="author">ChatGPT</div><div>&gt; The iSAQB CPSA Advanced Level Examination Rules outline the following key points:
+&gt; This level is well-suited for experienced software architects who wish to formalize their expertise and further their professional development in specific areas of software architecture.</div></pre><pre class="message"><div class="author">user</div><div>So, here are the official rules for taking the exam.</div></pre>[PDF left out]<pre class="message"><div class="author">ChatGPT</div><div>&gt; The iSAQB CPSA Advanced Level Examination Rules outline the following key points:
 
 1. **Competence Areas and Modular Concept**: Candidates must demonstrate at least 70 credit points from three areas of competence: technological, methodical, and communicative competence, with at least 10 points in each area.
 
@@ -188,7 +188,7 @@
 
 10. **Repeat Examination**: In case of failure, there is a one-off opportunity to improve the assignment within two months, with an additional fee charged for the repeat examination.
 
-These rules provide a comprehensive framework to ensure the integrity and quality of the CPSA Advanced Level certification process.</div></pre><pre class="message"><div class="author">user</div><div>Since the exam is not interactive, I think, it is important that we use the correct term regarding their definitions. Here is the official glossary. Read it. Name the three most interesting terms.</div></pre><pre class="message"><div class="author">ChatGPT</div><div>&gt; After reviewing the iSAQB glossary, here are three interesting terms:
+These rules provide a comprehensive framework to ensure the integrity and quality of the CPSA Advanced Level certification process.</div></pre><pre class="message"><div class="author">user</div><div>Since the exam is not interactive, I think, it is important that we use the correct term regarding their definitions. Here is the official glossary. Read it. Name the three most interesting terms.</div></pre>[PDF left out]<pre class="message"><div class="author">ChatGPT</div><div>&gt; After reviewing the iSAQB glossary, here are three interesting terms:
 
 1. **Ubiquitous Language**: This term refers to a common language used by all team members in a software development project, ensuring clarity and consistency in communication. It's particularly relevant in Domain-Driven Design (DDD) where it helps bridge gaps between different domains and technical jargon.
 
@@ -196,13 +196,15 @@ These rules provide a comprehensive framework to ensure the integrity and qualit
 
 3. **Fitness Function**: In the context of software architecture, a fitness function is a quantitative measure used to guide the design and evolution of a system. It evaluates how well the system meets a set of architectural goals, and can be a powerful tool in ensuring that a system maintains its intended quality attributes over time.
 
-These terms reflect important concepts in software architecture, emphasizing communication, design principles, and the continuous evaluation of system quality.</div></pre><pre class="message"><div class="author">user</div><div>I now want to solve the example certification task called "BigSpender" with you. Read the document carefully, but do not start to solve the tasks yet.</div></pre><pre class="message"><div class="author">ChatGPT</div><div>&gt; I have carefully read the "BigSpender" task document for the CPSA-Advanced Final Task. The document presents a comprehensive case study that requires designing an architecture for an expense management system named "BigSpender" for a company named BIG PLC.
+These terms reflect important concepts in software architecture, emphasizing communication, design principles, and the continuous evaluation of system quality.</div></pre><pre class="message"><div class="author">user</div><div>I now want to solve the example certification task called "BigSpender" with you. Read the document carefully, but do not start to solve the tasks yet.</div></pre>[PDF left out]<pre class="message"><div class="author">ChatGPT</div><div>&gt; I have carefully read the "BigSpender" task document for the CPSA-Advanced Final Task. The document presents a comprehensive case study that requires designing an architecture for an expense management system named "BigSpender" for a company named BIG PLC.
 
 &gt; The task involves various subtasks like defining quality requirements, solution strategy, technical context, business structuring, technology decisions, and evaluation of the system. It encompasses aspects like handling expense claims electronically, integrating with external systems, ensuring compliance with auditing requirements, and accommodating different user roles and requirements.
 
 &gt; The document also provides a business context, class model, glossary, and user stories to aid in understanding the system's requirements and environment. It emphasizes the need for a solution that is scalable, adaptable to different countries and currencies, and capable of integrating with existing systems like payroll and document archives.
 
-&gt; Now that I've reviewed the document, I'm ready to assist you in solving the tasks related to the "BigSpender" case study, as per your guidance.</div></pre><pre class="message"><div class="author">ChatGPT</div><div>&gt; The image depicts the business context diagram for the BigSpender expense system. It outlines the interactions between users, external systems, and the BigSpender system itself.
+&gt; Now that I've reviewed the document, I'm ready to assist you in solving the tasks related to the "BigSpender" case study, as per your guidance.</div></pre>
+  <pre class="message"><div class="author">user</div><div>The document also contains two diagrams. here is the business context as image. Try to read and understand it. </div></pre><img src="business-context.png" style="width: 400px; max-width: 100%;"/>
+  <pre class="message"><div class="author">ChatGPT</div><div>&gt; The image depicts the business context diagram for the BigSpender expense system. It outlines the interactions between users, external systems, and the BigSpender system itself.
 
 - **Users and Roles**:
   - **Squanderer**: Submits receipts for expenses.
@@ -230,7 +232,9 @@ These terms reflect important concepts in software architecture, emphasizing com
   - Yellow block represents the system to be created (BigSpender expense system).
   - Blue blocks represent external systems.
 
-This diagram serves to provide a high-level understanding of how BigSpender is situated within the larger business context, showing its dependencies and interactions with people and other systems.</div></pre><pre class="message"><div class="author">ChatGPT</div><div>&gt; The class diagram provides an overview of the key entities involved in the BigSpender business domain and their relationships:
+This diagram serves to provide a high-level understanding of how BigSpender is situated within the larger business context, showing its dependencies and interactions with people and other systems.</div></pre>
+  <pre class="message"><div class="author">user</div><div>...and here is the simplified and incomplete class diagram as overview of the business. Try to read and understand it. <img src="class-diagram.png" style="width: 400px; max-width: 100%;"/></div></pre><img src="class-diagram.png" style="width: 400px; max-width: 100%;"/>
+  <pre class="message"><div class="author">ChatGPT</div><div>&gt; The class diagram provides an overview of the key entities involved in the BigSpender business domain and their relationships:
 
 - **Expense Account**: Linked to the "Squanderer," which likely represents the employee or consultant incurring expenses. It has a one-to-many relationship with "Operation," indicating that an expense account can have multiple expense operations.
 
