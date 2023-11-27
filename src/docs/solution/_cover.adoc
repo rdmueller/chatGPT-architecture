@@ -1,6 +1,6 @@
 include::../_config.adoc[]
 
-= CPSA-A Abschlussaufgabe: {nameDerAufgabe}
+= CPSA-A Example Task: {nameDerAufgabe}
 ChatGPT, Ralf D. Müller
 {version}, {version-date}
 
@@ -8,9 +8,22 @@ ChatGPT, Ralf D. Müller
 == Liste der Abbildungen
 list-of::image[]
 
+list-of::plantuml[]
+
+list-of::diagram[]
+
 [discrete]
 == Liste der Tabellen
 list-of::table[]
+
+:kroki-server-url: https://kroki.io
+:kroki-sever-type: kroki_io
+
+
+//[plantuml]
+//....
+//version
+//....
 
 //[discrete]
 //== List of code snippets

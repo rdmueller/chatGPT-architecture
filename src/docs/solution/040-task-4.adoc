@@ -1,4 +1,5 @@
-:diagram-server-url: https://kroki.io
+:diagram-server-url: http://kroki.io
+:diagram-server-type: kroki_io
 
 = BigSpender System Architecture - Business Structuring
 
@@ -7,6 +8,7 @@ The objective is to develop and visualize a rough business structuring of the Bi
 
 == Component Diagram
 
+.BigSpender Business Structure
 [plantuml, BigSpender_Business_Structure, png]
 ....
 @startuml BigSpender_Business_Structure
@@ -50,6 +52,7 @@ Rel(integration, inTray, "Integrates")
 
 == Components and Their Interactions
 
+.Components and Their Interactions
 [cols="3,5,5", options="header"]
 |===
 | Component

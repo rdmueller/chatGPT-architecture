@@ -1,5 +1,5 @@
-:diagram-server-url: https://kroki.io
-:diagram-sever-type: kroki_io
+:diagram-server-url: http://kroki.io
+:diagram-server-type: kroki_io
 
 = BigSpender System Architecture - Quality Requirements
 
@@ -17,6 +17,7 @@ The quality scenarios are formulated to align with the business's needs and are 
 
 == Key Quality Goals
 
+.Key Quality Goals
 [cols="1,2,1", options="header"]
 |===
 | ID
@@ -47,6 +48,7 @@ The quality scenarios are formulated to align with the business's needs and are 
 
 == Quality Scenarios
 
+.Quality Scenarios
 [cols="1,4,1", options="header"]
 |===
 | ID
@@ -77,6 +79,7 @@ The quality scenarios are formulated to align with the business's needs and are 
 
 == Quality Features Influenced by Scenarios
 
+.Quality Features Influenced by Scenarios
 [cols="1,3", options="header"]
 |===
 | Quality Feature
@@ -101,6 +104,7 @@ The quality scenarios are formulated to align with the business's needs and are 
 
 == Utility Tree
 
+.BigSpender Utility Tree
 [plantuml, BigSpender_Utility_Tree, png]
 ....
 @startmindmap

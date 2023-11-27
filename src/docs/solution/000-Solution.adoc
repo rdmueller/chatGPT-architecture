@@ -6,7 +6,8 @@
 :nameDerAufgabe: BigSpender
 :version: 0.1
 :version-date: 11.11.2023
-:kroki-server-url: https://kroki.io
+:diagram-server-url: http://kroki.io
+:diagram-server-type: kroki_io
 
 include::_cover.adoc[]
 

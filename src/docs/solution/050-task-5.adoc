@@ -1,4 +1,5 @@
-:diagram-server-url: https://kroki.io
+:diagram-server-url: http://kroki.io
+:diagram-server-type: kroki_io
 
 = BigSpender System Architecture - Technology Decisions
 
@@ -20,8 +21,11 @@ The interaction chosen to demonstrate the technology stack and its alignment wit
 - Security: Spring Security, OAuth 2.0, JWT
 - Monitoring and Logging: ELK Stack
 
+<<<
+
 === Workflow of Submitting an Expense Claim
 
+.Workflow of Submittion an Expense Claim
 [cols="3,3,4", options="header"]
 |===
 | What Happens

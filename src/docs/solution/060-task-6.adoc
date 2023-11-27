@@ -1,4 +1,5 @@
-:diagram-server-url: https://kroki.io
+:diagram-server-url: http://kroki.io
+:diagram-server-type: kroki_io
 
 = BigSpender System Architecture - Evaluation
 

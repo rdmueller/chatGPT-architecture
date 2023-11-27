@@ -1,5 +1,5 @@
-:diagram-server-url: https://kroki.io
-:diagram-sever-type: kroki_io
+:diagram-server-url: http://kroki.io
+:diagram-server-type: kroki_io
 
 = BigSpender System Architecture - Technical Context
 
@@ -10,6 +10,7 @@ This solution strategy provides a comprehensive overview of the technical contex
 
 == Context Diagram
 
+.BigSpender Context
 [plantuml, BigSpender_Context, png]
 ....
 
@@ -51,6 +52,7 @@ Rel(bigSpender, inTray, "Receives data via", "HTTPS REST API")
 
 == External Systems and Protocols
 
+.External Systems and Protocols
 [cols="2,2", options="header"]
 |===
 | External System
