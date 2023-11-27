@@ -1,0 +1,35 @@
+:diagram-server-url: https://kroki.io
+
+= BigSpender System Architecture - Evaluation
+
+== Subtask 6 – Evaluation
+The task is to identify the top five riskiest and most important quality scenarios from subtask 1, providing a rationale for their selection and discussing how the architecture addresses these scenarios. This includes referring to central decisions in the architecture, submitting any new decisions, countering risks, and highlighting trade-offs. This approach ensures that the architecture is robust against key risks and aligns with critical quality goals.
+
+== Top 5 Riskiest and Most Important Quality Scenarios
+
+1. *Data Integrity and Compliance (Q1)*
+- Rationale: Essential for legal compliance and integrity of financial data. Any breach could lead to legal issues and loss of trust.
+- Architectural Decision: Implementing strict access control and audit trails within the system. Using Spring Security for robust authentication and authorization, ensuring that only authorized users can modify data.
+- Trade-offs: This may slightly increase system complexity but is necessary for ensuring compliance and data integrity.
+
+2. *System Performance and Scalability (Q2)*
+- Rationale: Critical for user experience and system reliability, especially during peak times.
+- Architectural Decision: Using a cloud-based infrastructure (AWS) for scalability. Implementing caching mechanisms with Redis to enhance performance.
+- Trade-offs: Additional cost for cloud infrastructure and complexity in cache management, but essential for maintaining performance.
+
+3. *Security of Personal Data (Q3)*
+- Rationale: Data breaches can have severe legal and reputational consequences.
+- Architectural Decision: Encryption of data in transit and at rest, using HTTPS and TLS for secure communication. Implementation of OAuth 2.0 and JWT for secure handling of authentication and authorization tokens.
+- Trade-offs: These security measures may add latency to the system, but they are non-negotiable for ensuring data security.
+
+4. *System Reliability and Availability (Q5)*
+- Rationale: System downtime can disrupt business operations and damage the company's reputation.
+- Architectural Decision: Adopting a microservices architecture for fault isolation, using Docker and Jenkins for consistent deployment, and AWS for high availability.
+- Trade-offs: This approach requires more effort in monitoring and management but is crucial for high availability.
+
+5. *Usability (Q4)*
+- Rationale: Essential for user adoption and productivity. Poor usability can lead to inefficiencies.
+- Architectural Decision: Using React and Bootstrap for creating an intuitive and responsive user interface, ensuring ease of use.
+- Trade-offs: May require more upfront development effort for a user-friendly design, but it is critical for user satisfaction and system adoption.
+
+These scenarios have been selected based on their potential impact on the system's operational effectiveness, legal compliance, user satisfaction, and the business's reputation. The architectural decisions made in each case are aimed at mitigating the risks associated with these scenarios, ensuring the system is robust, compliant, and user-friendly.

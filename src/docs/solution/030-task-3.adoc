@@ -1,0 +1,73 @@
+:diagram-server-url: https://kroki.io
+:diagram-sever-type: kroki_io
+
+= BigSpender System Architecture - Technical Context
+
+== Subtask 3 – Technical context
+Create a technical context for the BigSpender system, identifying all users, devices, and external systems, including those technically motivated and missing in the business context view. Decide which parts to develop in-house and which to buy or use as open source, distinguishing these parts accordingly. Additionally, state the communication mechanism for each connection between technical nodes.
+
+This solution strategy provides a comprehensive overview of the technical context for the BigSpender system. It identifies all actors and external systems that interact with BigSpender, and the communication protocols used. This approach ensures that the technical architecture aligns with the business needs and quality requirements of the system.
+
+== Context Diagram
+
+[plantuml, BigSpender_Context, png]
+....
+
+@startuml BigSpender_Context
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+LAYOUT_WITH_LEGEND()
+
+Person(squanderer, "Squanderer", "Employee or consultant submitting expenses")
+Person(receiptScanner, "Receipt Scanner", "Person or system scanning receipts")
+Person(approver, "Approver", "Supervisor or manager approving expenses")
+Person(businessAdmin, "Business Admin", "Administrator for business rules")
+Person(auditor, "Auditor", "Responsible for auditing expense claims")
+
+System_Boundary(bigSpender_sys, "BigSpender System") {
+    Container(bigSpender, "BigSpender", "Java/Groovy application", "Manages and processes expense claims")
+}
+
+System_Ext(payroll, "Payroll System", "Manages employee payments")
+System_Ext(userDirectory, "User Directory", "Manages user authentication")
+System_Ext(documentArchive, "Document Archive", "Stores receipts and documents")
+System_Ext(invoicesSystem, "Invoices System", "Manages invoicing")
+System_Ext(inTray, "In-tray System", "Manages incoming receipts/documents")
+
+Rel(squanderer, bigSpender, "Uses")
+Rel(receiptScanner, bigSpender, "Uses")
+Rel(approver, bigSpender, "Uses")
+Rel(businessAdmin, bigSpender, "Uses")
+Rel(auditor, bigSpender, "Audits")
+
+Rel(bigSpender, payroll, "Integrates via", "HTTPS REST API")
+Rel(bigSpender, userDirectory, "Authenticates via", "LDAP over TLS")
+Rel(bigSpender, documentArchive, "Accesses", "WebDAV over HTTPS")
+Rel(bigSpender, invoicesSystem, "Integrates via", "SOAP over HTTPS")
+Rel(bigSpender, inTray, "Receives data via", "HTTPS REST API")
+
+@enduml
+....
+
+== External Systems and Protocols
+
+[cols="2,2", options="header"]
+|===
+| External System
+| Communication Protocol
+
+| Payroll System
+| HTTPS REST API
+
+| User Directory
+| LDAP over TLS
+
+| Document Archive
+| WebDAV over HTTPS
+
+| Invoices System
+| SOAP over HTTPS
+
+| In-tray System
+| HTTPS REST API
+|===

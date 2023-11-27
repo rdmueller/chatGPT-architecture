@@ -1,0 +1,96 @@
+:diagram-server-url: https://kroki.io
+
+= BigSpender System Architecture - Business Structuring
+
+== Subtask 4 – Business structuring
+The objective is to develop and visualize a rough business structuring of the BigSpender system. This involves naming the individual system components, defining their responsibilities, and explaining how they interact. This approach provides a clear and modular view of the system, facilitating understanding and communication among stakeholders.
+
+== Component Diagram
+
+[plantuml, BigSpender_Business_Structure, png]
+....
+@startuml BigSpender_Business_Structure
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+LAYOUT_WITH_LEGEND()
+
+Person(squanderer, "Squanderer", "Employee or consultant submitting expenses")
+Person(receiptScanner, "Receipt Scanner", "Person or system scanning receipts")
+Person(approver, "Approver", "Supervisor or manager approving expenses")
+Person(businessAdmin, "Business Admin", "Administrator for business rules")
+Person(auditor, "Auditor", "Responsible for auditing expense claims")
+
+System_Boundary(bigSpender_sys, "BigSpender System") {
+    Container(expenseManagement, "Expense Management Module", "Java/Groovy", "Manages and processes expense claims")
+    Container(userManagement, "User Management Module", "Java/Groovy", "Handles user authentication and authorization")
+    Container(reporting, "Reporting Module", "Java/Groovy", "Generates expense reports and analytics")
+    Container(integration, "Integration Module", "Java/Groovy", "Integrates with external systems")
+}
+
+System_Ext(payroll, "Payroll System", "Manages employee payments")
+System_Ext(userDirectory, "User Directory", "Manages user authentication")
+System_Ext(documentArchive, "Document Archive", "Stores receipts and documents")
+System_Ext(invoicesSystem, "Invoices System", "Manages invoicing")
+System_Ext(inTray, "In-tray System", "Manages incoming receipts/documents")
+
+Rel(squanderer, expenseManagement, "Uses")
+Rel(receiptScanner, expenseManagement, "Uses")
+Rel(approver, expenseManagement, "Uses")
+Rel(businessAdmin, userManagement, "Uses")
+Rel(auditor, reporting, "Audits")
+
+Rel(expenseManagement, payroll, "Integrates via Integration Module")
+Rel(userManagement, userDirectory, "Authenticates/authorizes via Integration Module")
+Rel(reporting, documentArchive, "Accesses via Integration Module")
+Rel(integration, invoicesSystem, "Integrates")
+Rel(integration, inTray, "Integrates")
+
+@enduml
+....
+
+== Components and Their Interactions
+
+[cols="3,5,5", options="header"]
+|===
+| Component
+| Responsibility
+| Interaction
+
+| Expense Management Module
+| Manages and processes expense claims
+| Interacts with Squanderer, Receipt Scanner, and Approver for managing expenses. Integrates with Payroll System via Integration Module.
+
+| User Management Module
+| Handles user authentication and authorization
+| Used by Business Admin. Authenticates and authorizes via User Directory.
+
+| Reporting Module
+| Generates expense reports and analytics
+| Used by Auditor. Accesses data from Document Archive.
+
+| Integration Module
+| Integrates with external systems
+| Connects Expense Management, User Management, and Reporting Modules with external systems like Payroll, User Directory, Invoices System, and In-tray System.
+
+| Payroll System
+| Manages employee payments
+| Receives processed expense claims from the Expense Management Module.
+
+| User Directory
+| Manages user authentication
+| Provides authentication and authorization services to the User Management Module.
+
+| Document Archive
+| Stores receipts and documents
+| Archives documents and receipts accessed by the Reporting Module.
+
+| Invoices System
+| Manages invoicing
+| Integrated by the Integration Module for managing invoicing related to expenses.
+
+| In-tray System
+| Manages incoming receipts/documents
+| Provides receipts and documents to the Expense Management Module.
+|===
+
+This business structuring of the BigSpender system provides a comprehensive view of the system components and their roles. The modular approach aligns with the system's quality requirements, ensuring scalability, maintainability, and clear delineation of responsibilities. The inclusion of external systems highlights the system's integration points, essential for a holistic understanding of the system architecture.

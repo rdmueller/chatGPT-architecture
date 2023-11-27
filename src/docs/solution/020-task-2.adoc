@@ -1,0 +1,26 @@
+:diagram-server-url: https://kroki.io
+
+= BigSpender System Architecture - Solution Strategy
+
+== Subtask 2 – Solution strategy
+The goal is to outline a solution strategy for the BigSpender system, communicating key constraints, assumptions, and basic principles guiding the design decisions. This is crucial for aligning stakeholders on the architectural vision and approach. The strategy has been formulated considering the provided clarifications and aligning with the quality requirements.
+
+== Solution Strategy
+
+=== Key Constraints
+- *Technology Stack*: Preference for Java or Groovy-based technologies, with a focus on Spring Boot or Grails.
+- *Deployment Environment*: The system will be deployed in a cloud environment.
+- *Security Protocol*: All connections must be secured using TLS.
+
+=== Assumptions
+- *Integration Points*: Assumed integration with payroll, user directory, and other external systems via secure APIs.
+- *Scalability*: Based on the requirement to support up to 10,000 concurrent users, scalable architecture is assumed to be a priority.
+- *Modulith Architecture*: The system will adopt a modular monolith (modulith) approach, aligning with the quality requirements.
+
+=== Basic Principles
+- *Modularity*: The system will be designed with clear module boundaries, promoting maintainability and ease of future scaling or modifications.
+- *Security*: Adhering to the principle of secure by design, security will be integrated into the architecture from the outset, particularly focusing on data protection and compliance with German law.
+- *Performance and Scalability*: Ensuring responsiveness and stability under high user load.
+- *Usability*: Focused on providing an intuitive user experience, with simplicity in navigation and interaction.
+
+This solution strategy has been crafted to ensure that the BigSpender system is robust, secure, and scalable, adhering to the specified technological preferences and deployment environment. The modular approach aligns with the modulith architecture, ensuring ease of maintenance and future enhancements. Security and usability have been prioritized in line with the stated quality goals and business requirements.

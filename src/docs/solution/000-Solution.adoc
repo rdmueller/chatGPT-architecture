@@ -1,0 +1,46 @@
+:jbake-menu: -
+:doctype: book
+:sectnums:
+:pdf-themesdir: ../pdfTheme
+:pdf-theme: custom
+:nameDerAufgabe: BigSpender
+:version: 0.1
+:version-date: 11.11.2023
+:kroki-server-url: https://kroki.io
+
+include::_cover.adoc[]
+
+<<<
+
+== Introduction
+
+This document describes the solution for the BigSpender iSAQB example certification for the advanced level.
+It was mainly created by ChatGPT.
+
+Sources for the certification task where taken from the iSAQB website: https://www.isaqb.org/certifications/examinations/cpsa-advanced-level-examinations/[isaqb.org]
+
+The ChatGPT model used was GPT-4 with a context size of 4096 tokens. A model with a larger context size (128.000 tokens) was available through the API but not in the chat application.
+
+<<<
+
+include::010-task-1.adoc[leveloffset=+1]
+
+<<<
+
+include::020-task-2.adoc[leveloffset=+1]
+
+<<<
+
+include::030-task-3.adoc[leveloffset=+1]
+
+<<<
+
+include::040-task-4.adoc[leveloffset=+1]
+
+<<<
+
+include::050-task-5.adoc[leveloffset=+1]
+
+<<<
+
+include::060-task-6.adoc[leveloffset=+1]

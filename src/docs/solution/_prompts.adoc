@@ -1,0 +1,36 @@
+What is the third sub-task?
+Solve the third sub-task as AsciiDoc document.
+Repeat the original sub-task description and add some explanation why you've solved the task this way.
+Embed the context diagram as plantUML diagram in the AsciiDoc document.
+Use the C4 notation for the diagram.
+Put labels with the corresponding protocol on all connections.
+Add a table which contains all external systems and their respective protocols.
+
+How much context of your context window have we already used up in this session? Answer in terms of tokens.
+
+Let's start to work on the technical context.
+First, name all actors who will interact with the system.
+Then name all external systems which will have a connection to our system.
+Then name all external interfaces which will be used by our system in a table together with the protocol used.
+If you have questions about the protocol, just use HTTP.
+
+Now, solve the first task by creating the expected deliverables as one AsciiDoc document:
+Expected Deliverables: The task expects the submission of 3-5 quality goals in a table format with a brief motivation for each and their respective weightings, a formulated quality scenario for each quality goal with its business importance, and a utility tree presented graphically.
+Repeat the original sub-task description on top of the output and add some explanation why you've solved the task this way.
+Include the utility tree as plantUML diagram in the AsciiDoc document via the diagrams plugin.
+
+Solve the second subtask by creating the expected results as one AsciiDoc document.
+Repeat the original sub-task description on top of the output and add some explanation why you've solved the task this way.
+If you have any questions about this task, ask them now.
+
+Solve the third sub-task as AsciiDoc document.
+Repeat the original sub-task description and add some explanation why you've solved the task this way.
+Embed the context diagram as plantUML diagram in the AsciiDoc document via the diagrams plugin.
+Use the C4 notation for the diagram.
+Put labels with the corresponding protocol on all connections.
+Add a table which contains all external systems and their respective protocols.
+
+Solve the fifth sub-task as AsciiDoc document.
+Repeat the original sub-task description and add some explanation why you've solved the task this way.
+Repeat the chosen technology stack.
+Add an explanation of how this technology stack ensures the quality goals from subtask 1.

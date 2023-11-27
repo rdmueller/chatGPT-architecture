@@ -1,0 +1,68 @@
+:diagram-server-url: https://kroki.io
+
+= BigSpender System Architecture - Technology Decisions
+
+== Subtask 5 – Technology decisions
+Define the technology stack mapping the BigSpender design onto real IT infrastructure, describing programming languages, operating systems, database technologies, and communication mechanisms. Then, explain and rationalize how this technology stack ensures the quality goals identified in subtask 1, focusing on the user interaction of "Submitting an Expense Claim." This will include a tabular step-by-step presentation of the workflow, showing the contribution of system parts towards achieving the quality goals.
+
+== User Interaction: Submitting an Expense Claim
+
+The interaction chosen to demonstrate the technology stack and its alignment with quality goals is "Submitting an Expense Claim."
+
+=== Technology Stack Overview
+- Programming Language: Java with Spring Boot
+- Operating System: Linux
+- Database Technologies: PostgreSQL and Redis
+- Communication Mechanisms: RESTful APIs, HTTPS, and TLS
+- Front-End Technologies: React and Bootstrap
+- Cloud Infrastructure: AWS
+- DevOps Tools: Docker and Jenkins
+- Security: Spring Security, OAuth 2.0, JWT
+- Monitoring and Logging: ELK Stack
+
+=== Workflow of Submitting an Expense Claim
+
+[cols="3,3,4", options="header"]
+|===
+| What Happens
+| System Parts Involved
+| Contribution to Quality Goals
+
+| User logs in to submit an expense
+| React Front-End, Spring Security, User Directory (LDAP over TLS)
+| Ensures secure access (Security), User-friendly UI (Usability)
+
+| User inputs expense details
+| React Front-End, Bootstrap
+| Provides an intuitive interface, ensuring data accuracy (Usability)
+
+| Expense data submitted to server
+| Spring Boot Application, RESTful API over HTTPS
+| Secure transmission of data (Security), Efficient processing (Performance)
+
+| Data validated and processed
+| Spring Boot Application, Business Logic Layer
+| Ensures data integrity and compliance with business rules (Data Integrity)
+
+| Data stored in PostgreSQL
+| PostgreSQL Database, Transaction Management
+| Maintains data integrity and consistency (Data Integrity), Reliable data storage (Reliability)
+
+| Cache updated in Redis
+| Redis
+| Enhances retrieval speed for frequently accessed data (Performance)
+
+| Confirmation sent to user
+| Spring Boot Application, React Front-End
+| Provides immediate feedback to user (Usability), Ensures system responsiveness (Performance)
+
+| Notification sent to Approver
+| Spring Boot Application, RabbitMQ
+| Decouples message delivery (Reliability), Asynchronous communication (Performance)
+
+| Data available for auditing
+| Reporting Module, ELK Stack
+| Facilitates audit processes (Compliance), Effective logging (Reliability)
+|===
+
+This workflow demonstrates the "concert of system parts" used to ensure the quality goals. The technology stack has been selected and configured to address the identified quality goals of Security, Usability, Performance, Data Integrity, and Reliability, as defined in subtask 1.
